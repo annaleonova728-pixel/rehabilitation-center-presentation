@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Центр реабилитации для участников СВО</title>
+    <style>
+      :root {
+        --bg: #f3f6f9;
+        --panel: #ffffff;
+        --text: #1a2433;
+        --muted: #54657a;
+        --accent: #1d4e89;
+        --accent-2: #5aa9e6;
+        --line: #dfeaf3;
+        --chip: #edf5ff;
+      }
+
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: "Segoe UI", Arial, sans-serif;
+        background: linear-gradient(135deg, #edf5ff 0%, #f3f6f9 40%, #eef6ef 100%);
+        color: var(--text);
+      }
+
+      .deck {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 32px 20px 60px;
+      }
+
+      .slide {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 34px 42px 28px;
+        margin-bottom: 24px;
+        box-shadow: 0 10px 30px rgba(14, 45, 78, 0.08);
+      }
+
+      .slide-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 18px;
+        padding-bottom: 14px;
+        border-bottom: 2px solid var(--line);
+      }
+
+      .slide-tag {
+        font-size: 11px;
+        letter-spacing: 1.4px;
+        text-transform: uppercase;
+        color: var(--accent);
+        font-weight: 700;
+      }
+
+      h1, h2, h3 {
+        margin: 0;
+        line-height: 1.2;
+      }
+
+      h1 {
+        font-size: clamp(28px, 3vw, 46px);
+        margin: 10px 0 12px;
+      }
+
+      h2 {
+        font-size: clamp(22px, 2.4vw, 34px);
+        margin: 10px 0 12px;
+      }
+
+      p, li {
+        font-size: 18px;
+        line-height: 1.6;
+        color: var(--text);
+      }
+
+      ul {
+        margin: 14px 0 0 22px;
+        padding: 0;
+      }
+
+      li + li {
+        margin-top: 8px;
+      }
+
+      .sub {
+        color: var(--muted);
+        font-size: 16px;
+        font-weight: 600;
+      }
+
+      .two-col {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 24px;
+        align-items: start;
+      }
+
+      .panel {
+        background: var(--chip);
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        padding: 18px 18px 12px;
+      }
+
+      .kpi {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(160px, 1fr));
+        gap: 12px;
+      }
+
+      .kpi-item {
+        background: #ffffff;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        padding: 16px 14px;
+      }
+
+      .kpi-item strong {
+        display: block;
+        font-size: 24px;
+        color: var(--accent);
+        margin-bottom: 6px;
+      }
+
+      .hero {
+        background: linear-gradient(135deg, #1d4e89 0%, #4f8ecb 100%);
+        color: white;
+        border-radius: 18px;
+        padding: 26px 28px;
+        margin-top: 8px;
+      }
+
+      .hero p, .hero li {
+        color: white;
+      }
+
+      @media (max-width: 760px) {
+        .slide { padding: 22px 20px 20px; }
+        .two-col, .kpi { grid-template-columns: 1fr; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="deck">
+      <section class="slide">
+        <div class="slide-header">
+          <div class="slide-tag">Слайд 1</div>
+        </div>
+        <div class="hero">
+          <h1>Центр реабилитации для участников СВО</h1>
+          <p>Архитектурно-пространственная концепция специализированного центра комплексной реабилитации.</p>
+        </div>
+        <p style="margin-top: 18px;">Проект направлен на создание среды, способству��щей восстановлению, адаптации и возвращению человека к повседневной жизни после военного опыта и травм.</p>
+      </section>
+
+      <section class="slide">
+        <div class="slide-header">
+          <div class="slide-tag">Слайд 2</div>
+          <div class="sub">Актуальность проекта</div>
+        </div>
+        <div class="two-col">
+          <div>
+            <p>Возвращение участников СВО к мирной жизни требует не только медицинской помощи, но и комплексной системы восстановления.</p>
+            <ul>
+              <li>физическое состояние;</li>
+              <li>двигательная активность;</li>
+              <li>психологическое состояние;</li>
+              <li>способность к самостоятельному передвижению;</li>
+              <li>социальное взаимодействие;</li>
+              <li>профессиональная и бытовая адаптация.</li>
+            </ul>
+          </div>
+          <div class="panel">
+            <h3 style="margin-bottom:10px;">Основная проблема</h3>
+            <p>Одной медицинской помощи недостаточно: важно создать среду, объединяющую физическую, психологическую и социальную реабилитацию.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide">
+        <div class="slide-header">
+          <div class="slide-tag">Слайд 3</div>
+          <div class="sub">Цель и задачи</div>
+        </div>
+        <h2>Цель проекта</h2>
+        <p>Создать архитектурно-комфортную среду для восстановления участников СВО, обеспечивающую их физическое, психологическое и социальное возвращение к полноценной жизни.</p>
+        <div class="kpi" style="margin-top: 18px;">
+          <div class="kpi-item"><strong>01</strong>Комплексная реабилитация</div>
+          <div class="kpi-item"><strong>02</strong>Безопасная среда</div>
+          <div class="kpi-item"><strong>03</strong>Социальная адаптация</div>
+          <div class="kpi-item"><strong>04</strong>Профессиональное возвращение</div>
+        </div>
+      </section>
+
+      <section class="slide">
+        <div class="slide-header">
+          <div class="slide-tag">Слайд 4</div>
+          <div class="sub">Что такое реабилитация</div>
+        </div>
+        <p>Реабилитация — это комплекс мероприятий, направленных на восстановление или компенсацию нарушенных функций человека и его адаптацию к повседневной жизни.</p>
+        <ul>
+          <li><strong>Физическая реабилитация:</strong> восстановление двигательных функций и физической активности.</li>
+          <li><strong>Психологическая реабилитация:</strong> помощь в преодолении эмоциональных и психологических трудностей.</li>
+          <li><strong>Социальная реабилитация:</strong> восстановление социальных связей и навыков самостоятельной жизни.</li>
+          <li><strong>Профессиональная адаптация:</strong> помощь в возвращении к работе или освоении новых профессиональных навыков.</li>
+        </ul>
+      </section>
+
+      <section class="slide">
+        <div class="slide-header">
+          <div class="slide-tag">Слайд 5</div>
+          <div class="sub">Пользователи центра</div>
+        </div>
+        <div class="two-col">
+          <div>
+            <p>Основными пользователями центра являются участники СВО, нуждающиеся в различных видах реабилитационной помощи.</p>
+            <ul>
+              <li>люди после тяжелых травм и операций;</li>
+              <li>люди с нарушениями опорно-двигательного аппарата;</li>
+              <li>пользователи инвалидных колясок;</li>
+              <li>люди с временными ограничениями мобильности;</li>
+              <li>посетители, нуждающиеся в психологической поддержке;</li>
+              <li>сопровождающие и члены семей.</li>
+            </ul>
+          </div>
+          <div class="panel">
+            <h3>Архитектурный вывод</h3>
+            <p>Проектирование должно учитывать разные уровни мобильности, психологические особенности и потребности сопровождающих.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide">
+        <div class="slide-header">
+          <div class="slide-tag">Слайд 6</div>
+          <div class="sub">Проблемы и потребности</div>
+        </div>
+        <div class="two-col">
+          <div>
+            <h3>Физические потребности</h3>
+            <ul>
+              <li>восстановление двигательной активности;</li>
+              <li>лечебные и восстановительные процедуры;</li>
+              <li>тренировка самостоятельного передвижения.</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Психологические потребности</h3>
+            <ul>
+              <li>индивидуальная помощь;</li>
+              <li>возможность общения;</li>
+              <li>спокойная и безопасная атмосфера.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="panel" style="margin-top:18px;">
+          <h3>Социальные потребности</h3>
+          <p>Взаимодействие с другими людьми, совместные занятия, постепенное возвращение к привычному образу жизни и восстановление чувства социальной включенности.</p>
+        </div>
+      </section>
+
+      <section class="slide">
+        <div class="slide-header">
+          <div class="slide-tag">Слайд 7</div>
+          <div class="sub">Требования к среде</div>
+        </div>
+        <ul>
+          <li>безбарьерная доступность;</li>
+          <li>удобство и безопасность передвижения;</li>
+          <li>понятная навигация;</li>
+          <li>разделение функциональных зон;</li>
+          <li>возможность индивидуальных и групповых занятий;</li>
+          <li>места для отдыха, общения и психологической разгрузки;</li>
+          <li>достаточное естественное освещение;</li>
+          <li>психологический комфорт помещений.</li>
+        </ul>
+        <p style="margin-top:14px;"><strong>Ключевая идея:</strong> центр должен быть не только медицинским объектом, но и поддерживающей, современной и гуманной средой восстановления.</p>
+      </section>
+
+      <section class="slide">
+        <div class="slide-header">
+          <div class="slide-tag">Итог</div>
+          <div class="sub">Ценность проекта</div>
+        </div>
+        <h2>Реабилитация как основа качественной жизни</h2>
+        <p>Проект центра для участников СВО — это социально значимый объект, где объединяются медицинская помощь, психологическая поддержка, социальная интеграция и возможность возвращения к полноценной жизни.</p>
+        <p>Главная цель — не просто восстановить здоровье, а помочь человеку снова почувствовать себя частью общества, устойчивым, уверенным и поддержанным.</p>
+      </section>
+    </div>
+  </body>
+</html>
+
